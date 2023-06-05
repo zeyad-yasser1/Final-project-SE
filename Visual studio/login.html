@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <h1>Login</h1>
+      <form onsubmit="login(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check the username and password combinations
+      if (username === 'banker123' && password === 'zeyad') {
+        window.location.href = 'banker.html'; // Redirect to banker.html
+      } else if (username === 'admin123' && password === 'zeyad') {
+        window.location.href = 'admin.html'; // Redirect to admin.html
+      } else if (username === 'client123' && password === 'zeyad') {
+        window.location.href = 'client.html'; // Redirect to client.html
+      } else {
+        alert('Invalid username or password. Please try again.'); // Show an error message
+      }
+    }
+  </script>
+</body>
+</html>

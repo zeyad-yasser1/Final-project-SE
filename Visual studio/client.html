@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Client Page</title>
+  <link rel="stylesheet" href="client.css">
+  <script src="client.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Blended Banking!</h1>
+
+    <div class="center-buttons">
+      <h2>View Transactions</h2>
+      <div class="transaction-container">
+        <div class="transaction-list">
+          <ul id="credit-transactions"></ul>
+        </div>
+        <div class="transaction-list">
+          <ul id="bank-transactions"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-buttons">
+      <h2>Issue a New Card</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="card-type">Type of Card:</label>
+        <select id="card-type" name="card-type">
+          <option value="credit">Credit</option>
+          <option value="debit">Debit</option>
+          <option value="prepaid">Prepaid</option>
+        </select>
+
+        <button type="submit">Issue Card</button>
+      </form>
+    </div>
+
+    <div class="center-buttons">
+      <h2>Open a New Account</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="account-type">Type of Account:</label>
+        <select id="account-type" name="account-type">
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+        </select>
+
+        <label for="initial-deposit">Initial Deposit:</label>
+        <input type="number" id="initial-deposit" name="initial-deposit">
+
+        <button type="submit">Open Account</button>
+      </form>
+    </div>
+
+    <div class="center-buttons">
+      <h2>Close an Existing Account</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="account-type">Type of Account:</label>
+        <select id="account-type" name="account-type">
+          <option value="checking">Checking</option>
+          <option value="savings">Savings</option>
+        </select>
+
+        <label for="initial-deposit">Initial Deposit:</label>
+        <input type="number" id="initial-deposit" name="initial-deposit">
+
+        <button type="submit">Close Account</button>
+      </form>
+    </div>
+
+    <div class="center-buttons">
+      <h2>Request a Loan</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="loan-amount">Amount of Loan:</label>
+        <input type="number" id="loan-amount" name="loan-amount">
+
+        <label for="loan-reason">Reason for Loan:</label>
+        <textarea id="loan-reason" name="loan-reason"></textarea>
+
+        <button type="submit">Request Loan</button>
+      </form>
+    </div>
+
+    <div class="center-buttons">
+      <h2>Set a Reminder</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time">
+
+        <label for="reminder-message">Reminder Message:</label>
+        <textarea id="reminder-message" name="reminder-message"></textarea>
+
+        <button type="submit">Set Reminder</button>
+      </form>
+    </div>
+
+    <div class="center-buttons">
+        <h2>Pay a Bill</h2>
+        <form id="bill-payment-form">
+          <div>
+            <label for="account-number">Account Number:</label>
+            <input type="text" id="account-number" name="account-number">
+          </div>
+      
+          <div>
+            <label for="bill-type">Bill Type:</label>
+            <select id="bill-type" name="bill-type">
+              <option value="gas">Gas</option>
+              <option value="water">Water</option>
+              <option value="electricity">Electricity</option>
+              <option value="telephone">Telephone</option>
+              <option value="credit-card">Credit Card</option>
+            </select>
+          </div>
+      
+          <div>
+            <label for="bill-amount">Bill Amount:</label>
+            <input type="number" id="bill-amount" name="bill-amount">
+          </div>
+      
+          <button type="submit">Pay Bill</button>
+        </form>        
+      </div>
+      
+      <div class="transfer-form">
+        <h2>Money Transfer</h2>
+        <form>
+          <div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount">
+          </div>
+          <div>
+            <label for="from-account">From Account:</label>
+            <input type="text" id="from-account" name="from-account" placeholder="Enter from account">
+          </div>
+          <div>
+            <label for="to-account">To Account:</label>
+            <input type="text" id="to-account" name="to-account" placeholder="Enter to account">
+          </div>
+          <div>
+            <label for="transfer-type">Transfer Type:</label>
+            <select id="transfer-type" name="transfer-type">
+              <option value="internal">Internal</option>
+              <option value="domestic">Domestic</option>
+              <option value="international">International</option>
+            </select>
+          </div>
+          <button type="submit">Transfer</button>
+
+          <h1>Bank Server Access Issue</h1>
+          <form>
+            <label for="issueSelect">Select the issue you are facing:</label>
+            <select id="issueSelect">
+              <option value="admin">Admin</option>
+              <option value="banker">Banker</option>
+            </select>
+          
+            <br><br>
+          
+            <label for="commentInput">Comments:</label><br>
+            <textarea id="commentInput" rows="4" cols="50"></textarea>
+          
+            <br><br>
+          
+            <button type="button" onclick="submitIssue()">Submit Issue</button>
+          </form>
+          
+        </form>
+      </div>
+      
